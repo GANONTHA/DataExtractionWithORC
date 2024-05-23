@@ -49,3 +49,8 @@ Instructions: Clear instructions on how to use the application, what types of fi
 Responsive Design: Ensure your UI is responsive and works well on different screen sizes, especially if users might be using the application on mobile devices.
 
 Remember, the specific features will depend on your project requirements and user needs. It's always a good idea to involve your users in the design process, for example through user interviews or usability testing.
+
+INSTALLATIONS
+
+1. Tesseract: composer require thiagoalessio/tesseract_ocr
+2. PHP Wrapper: composer require thiagoalessio/tesseract_ocr
