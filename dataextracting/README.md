@@ -54,3 +54,9 @@ INSTALLATIONS
 
 1. Tesseract: composer require thiagoalessio/tesseract_ocr
 2. PHP Wrapper: composer require thiagoalessio/tesseract_ocr
+
+TASKS A FAIRE NEXT >>
+
+1. Create views: form to upload file
+2. Create Route for each controller method
+3. create Model and Migration to store extracted data on the Database

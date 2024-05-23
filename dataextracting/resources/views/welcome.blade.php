@@ -91,8 +91,8 @@
             <div class="container px-5">
                 <div class="row gx-5 justify-content-center">
                     <div class="col-xl-8">
-                        <div class="h2 fs-1 text-white mb-4">"An intuitive solution to a common problem that we all face, wrapped up in a single app!"</div>
-                        <img src="assets/img/tnw-logo.svg" alt="..." style="height: 3rem" />
+                        <div class="h2 fs-1 text-white mb-4">"Une solution simple et tres fiable vous permettant d'extraire et d'anylizer le contenu d'un fichier image ou pdf!"</div>
+                        {{-- <img src="assets/img/tnw-logo.svg" alt="..." style="height: 3rem" /> --}}
                     </div>
                 </div>
             </div>
@@ -108,16 +108,16 @@
                                     <!-- Feature item-->
                                     <div class="text-center">
                                         <i class="bi-phone icon-feature text-gradient d-block mb-3"></i>
-                                        <h3 class="font-alt">Device Mockups</h3>
-                                        <p class="text-muted mb-0">Ready to use HTML/CSS device mockups, no Photoshop required!</p>
+                                        <h3 class="font-alt">Simple</h3>
+                                        <p class="text-muted mb-0">Le systeme est tres simple et facile a utiliser!</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-5">
                                     <!-- Feature item-->
                                     <div class="text-center">
-                                        <i class="bi-camera icon-feature text-gradient d-block mb-3"></i>
-                                        <h3 class="font-alt">Flexible Use</h3>
-                                        <p class="text-muted mb-0">Put an image, video, animation, or anything else in the screen!</p>
+                                        <i class="bi-laptop icon-feature text-gradient d-block mb-3"></i>
+                                        <h3 class="font-alt">Fiable</h3>
+                                        <p class="text-muted mb-0">La fiabilite de notre fait sa force. Avec une precision de pres de 100%!</p>
                                     </div>
                                 </div>
                             </div>
@@ -125,17 +125,17 @@
                                 <div class="col-md-6 mb-5 mb-md-0">
                                     <!-- Feature item-->
                                     <div class="text-center">
-                                        <i class="bi-gift icon-feature text-gradient d-block mb-3"></i>
-                                        <h3 class="font-alt">Free to Use</h3>
-                                        <p class="text-muted mb-0">As always, this theme is free to download and use for any purpose!</p>
+                                        <i class="bi-lock icon-feature text-gradient d-block mb-3"></i>
+                                        <h3 class="font-alt">Securise</h3>
+                                        <p class="text-muted mb-0">Les donnees sont fortement securisees et ne feront object d'aucune fraude!</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <!-- Feature item-->
                                     <div class="text-center">
                                         <i class="bi-patch-check icon-feature text-gradient d-block mb-3"></i>
-                                        <h3 class="font-alt">Open Source</h3>
-                                        <p class="text-muted mb-0">Since this theme is MIT licensed, you can use it commercially!</p>
+                                        <h3 class="font-alt">Polyvalent</h3>
+                                        <p class="text-muted mb-0">Notre systeme supporte plusieurs types de fichiers input vous permettant d'analyser une multitude de fichiers!</p>
                                     </div>
                                 </div>
                             </div>
