@@ -59,4 +59,14 @@ TASKS A FAIRE NEXT >>
 
 1. Create views: form to upload file
 2. Create Route for each controller method
-3. create Model and Migration to store extracted data on the Database
+
+
+RUN PROJECT ON YOUR LOCAL MACHINE
+1. Install PHP, Laravel , composer and Xampp
+2. Download the project Repo
+3. create a local mysql db on the xampp server
+4. configure db in .env file
+5. run composer install
+6. run the artisan server: php artisan serve
+7. see project locally
+8. create Model and Migration to store extracted data on the Database
