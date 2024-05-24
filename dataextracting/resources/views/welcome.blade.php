@@ -91,6 +91,11 @@
             <div class="container px-5">
                 <div class="row gx-5 justify-content-center">
                     <div class="col-xl-8">
+                        @if(isset($content))
+    <pre>{{ $content }}</pre>
+@else
+    <p>No text found.</p>
+@endif
                         <div class="h2 fs-1 text-white mb-4">"Une solution simple et tres fiable vous permettant d'extraire et d'anylizer le contenu d'un fichier image ou pdf!"</div>
                         {{-- <img src="assets/img/tnw-logo.svg" alt="..." style="height: 3rem" /> --}}
                     </div>
@@ -179,13 +184,14 @@
                     <div class="col-12 col-lg-5">
                         <h2 class="display-4 lh-1 mb-4">Ajouter un fichier pour analyser</h2>
                         {{-- <p class="lead fw-normal text-muted mb-5 mb-lg-0">This section is perfect for featuring some information about your application, why it was built, the problem it solves, or anything else! There's plenty of space for text here, so don't worry about writing too much.</p> --}}
-                        <form action="#">
+                        <form method="POST" action="{{route('processImage')}}" enctype="multipart/form-data" >
+                            @csrf
                             <div class="md-4">
-                                <label for="file">Ajouter un fichier (image, pdf)</label>
-                            <input type="file" name="file" id="file" class="form-control">
+                            <label for="file">Ajouter un fichier (image, pdf)</label>
+                            <input type="file" name="image" id="file" class="form-control">
 
                             </div>
-                                <button type="submit" class="btn btn-primary rounded-pill btn-lg disabled">Analyser Maintenant!</button>
+                                <button type="submit" class="btn btn-primary rounded-pill btn-lg">Analyser Maintenant!</button>
                         </form>
                     </div>
                     <div class="col-sm-8 col-md-6">

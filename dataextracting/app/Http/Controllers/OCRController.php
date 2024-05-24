@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class OCRController extends Controller
 {
@@ -16,24 +17,44 @@ class OCRController extends Controller
         // get imagePath file and store it in the folder uploaded_image
         $imagePath = $request->file('image')->store('uploaded_image');
 
+        $imagePath = storage_path('app/' . $imagePath);
+
+
         //output path
-        $outputPath = 'ocr_output.txt';
+        // $outputPath = 'ocr_output.txt';
+        $outputPath = storage_path('app/ocr_output');
 
         //execute the tesseract command
-        $command = "tesseract $imagePath $outputPath";
-        $result = shell_exec($command);
+        // Full path to the Tesseract executable
+
+        $imagePath = str_replace('/', '\\', $imagePath);
+        $outputPath = str_replace('/', '\\', $outputPath);
+
+
+        $tesseractPath = '"C:\\Program Files\\Tesseract-OCR\\tesseract.exe"';
+        $command = $tesseractPath . " " . escapeshellarg($imagePath) . " " . escapeshellarg($outputPath);
+        $result = shell_exec($command . " 2>&1");
+
+        //add a delay 
+        sleep(5);
+        //Print the result of the command
+        // return response()->json(['command' => $command, 'result' => $result]);
+        //Check if the command was successful
+        if ($result === null) {
+            return response()->json(['error' => 'Tesseract command failed.'], 500);
+        }
+
+        //Check if the output file exists before trying to read it
+        if (!file_exists($outputPath)) {
+            return response()->json(['error' => 'OCR output file not found.'], 404);
+        }
 
         //Read the OCR output from the file
         $ocr_output = file_get_contents($outputPath);
 
-        //handle error if the command fails
-        if (!$result) {
-            // $ocr_output = "Error: Command failed";
-            return response()->json(['error' => 'OCR processing failed.'], 500);
-        }
-
         //return the OCR output
-        return response()->json(['ocr_output' => $ocr_output], 200);
+        return view('welcome', ['content' => $ocr_output]);
+        // return response()->json(['ocr_output' => $ocr_output], 200);
     }
 
     //process pdf
